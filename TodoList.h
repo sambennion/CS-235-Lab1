@@ -23,7 +23,7 @@ public:
 	}
      ~TodoList()
 		{
-			cout << "in destructor" << endl;
+			//cout << "in destructor" << endl;
 			ofstream fout;
 			fout.open("TODOList.txt", ofstream::out | ofstream:: trunc);
 			for(int i = 0; i < tasks.size(); i++)
