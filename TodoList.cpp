@@ -1,11 +1,12 @@
 #include "TodoList.h"
 
-void TodoList::add(std::string _duedate, std::string _task){
-	cout << "in add " << _duedate << " " << _task << endl;
+
+void TodoList::add(string _duedate, string _task){
+	// cout << "in add " << _duedate << " " << _task << endl;
 	tasks.push_back(_duedate+"\n"+_task);
 }
-int TodoList::remove(std::string _task){
-	cout << "in remove" << endl;
+int TodoList::remove(string _task){
+	// cout << "in remove" << endl;
 	for(int i = 1; i < tasks.size(); i += 2) //incrementing by 2 so we are only checking tasks, not days
 	{
 		if(tasks.at(i) == _task)
@@ -15,12 +16,19 @@ int TodoList::remove(std::string _task){
 	}
 }
 void TodoList::printTodoList(){
-	cout << "in print Todo List" << endl;
-	for(int i = 0; i < tasks.size(); i++) 
+	// cout << "in print Todo List" << endl;
+	for(int i = 0; i < tasks.size(); i+=2) 
 	{
-		cout << tasks.at(i) << endl;
+		cout << tasks.at(i) << ": " << tasks.at(i+1) << endl;
 	}
 }
-void TodoList::printDaysTasks(std::string _date){
-	cout << "in print Days Tasks" << endl;
+void TodoList::printDaysTasks(string _date){
+	// cout << "in printDaysTasks" << endl;
+	for(int i = 0; i < tasks.size(); i += 2) //incrementing by 2 so we are only checking days
+	{
+		if(tasks.at(i) == _date)
+		{
+			cout << _date << ": " << tasks.at(i+1) << endl;
+		}
+	}
 }

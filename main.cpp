@@ -3,10 +3,12 @@
 int main(int argc, char *argv[])
 {
 	TodoList mylist;
-	for(int i = 0; i < argc; i++)
-	{
-		cout << "argv[" << i << "]=" << argv[i] << endl;
-	}
+	/*
+	 *for(int i = 0; i < argc; i++)
+	 *{
+	 *	cout << "argv[" << i << "]=" << argv[i] << endl;
+	 *}
+	 */
 	string firstarg = argv[1];
 	if(firstarg.compare("add") == 0)
 	{
@@ -27,6 +29,12 @@ int main(int argc, char *argv[])
 	{
 		cout << "Printing TODO list" << endl;
 		mylist.printTodoList();
+	}
+	if(firstarg.compare("printDay") == 0)
+	{
+		string date = argv[2];
+		cout << "Printing TODO list for" << date << endl;
+		mylist.printDaysTasks(date);
 	}
 
 	return 0;
