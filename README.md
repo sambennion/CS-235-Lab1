@@ -37,7 +37,7 @@ e.g. ./Todo printDay Sunday
 The text file, TODOList.txt, is intended to be edited through this command line program. The program is expecting the text file to be formatted a certain way.
 
 Format for TODOList.txt:
-**"Day of week"**
-**"Task"**
-**"Day of week"**
-**"Task"**
+**"Day of week"**\n
+**"Task"**\n
+**"Day of week"**\n
+**"Task"**\n
