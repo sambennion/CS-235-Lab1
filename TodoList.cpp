@@ -14,8 +14,10 @@ int TodoList::remove(string _task){
 		if(tasks.at(i) == _task)
 		{
 			tasks.erase(tasks.begin() + i-1, (tasks.begin() + i+1)); //erase both day and task
+			return 0;
 		}
 	}
+	return 1;
 }
 void TodoList::printTodoList(){
 	// cout << "in print Todo List" << endl;

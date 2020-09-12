@@ -15,7 +15,7 @@ public:
 		{
 			while(getline(fin, line))
 			{
-				cout << line << '\n';
+				//cout << line << '\n';
 				tasks.push_back(line);
 			}
 			fin.close();

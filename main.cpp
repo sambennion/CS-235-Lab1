@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	{
 		//cout << "Doing a remove" << endl;
 		string task = argv[2];
-		cout << " the task is " << task << endl;
+		//cout << " the task is " << task << endl;
 		mylist.remove(task);
 	}
 	if(firstarg.compare("printList") == 0)
